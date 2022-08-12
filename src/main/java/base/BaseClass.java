@@ -31,8 +31,8 @@ public class BaseClass {
 
 	@Parameters("browser")
 	@BeforeMethod
-	public void setUp() {
-		driver = localDriver("chrome");
+	public void setUp(String browser1) {
+		driver = localDriver(browser1);
 		driver.manage().window().maximize();
 		driver.get(configuration.getConfiguration("url"));
 		driver.manage().timeouts()

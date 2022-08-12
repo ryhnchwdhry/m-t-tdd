@@ -9,10 +9,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import common.Commons;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import objects.AboutYou;
+import objects.BusinessAc;
 import objects.HomePage;
 import utils.Configuration;
 
@@ -25,7 +27,9 @@ public class BaseClass {
 	protected Commons commons;
 	protected HomePage homePage;
 	protected AboutYou aboutYou;
+	protected BusinessAc businessAc;
 
+	@Parameters("browser")
 	@BeforeMethod
 	public void setUp() {
 		driver = localDriver("chrome");
@@ -59,6 +63,7 @@ public class BaseClass {
 		commons = new Commons();
 		homePage = new HomePage(driver, commons);
 		aboutYou = new AboutYou(driver, commons);
+		businessAc = new BusinessAc(driver, commons);
 	}
 
 	protected WebDriver getDriver() {
@@ -67,7 +72,7 @@ public class BaseClass {
 
 	@AfterMethod
 	public void terminate() {
-		driver.quit();
+//		driver.quit();
 	}
 
 }

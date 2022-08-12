@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mtb.qa.test.AutoClass">
+      <class name="businessAc.BusinessAcTest">
         <methods>
           <include name="terminate"/>
+          <include name="businessTest"/>
           <include name="setUp"/>
-          <include name="homepageSteps"/>
         </methods>
-      </class> <!-- com.mtb.qa.test.AutoClass -->
+      </class> <!-- businessAc.BusinessAcTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

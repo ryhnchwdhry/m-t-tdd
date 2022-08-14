@@ -7,10 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
+import common.CommonWaits;
 import common.Commons;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import objects.AboutYou;
@@ -23,6 +25,7 @@ public class BaseClass {
 	public Configuration configuration = new Configuration(null);
 
 	WebDriver driver;
+	
 
 	protected Commons commons;
 	protected HomePage homePage;
@@ -60,6 +63,7 @@ public class BaseClass {
 	}
 
 	private void initClasses() {
+		
 		commons = new Commons();
 		homePage = new HomePage(driver, commons);
 		aboutYou = new AboutYou(driver, commons);
@@ -74,5 +78,6 @@ public class BaseClass {
 	public void terminate() {
 //		driver.quit();
 	}
+
 
 }

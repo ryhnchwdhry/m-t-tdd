@@ -9,7 +9,7 @@
 		<compilerVersion>1.8</compilerVersion>
 	</properties>
 
-	<dependencies>
+<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -28,6 +28,18 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.2.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.2.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.2.2</version>
+		</dependency>
 
 	</dependencies>
 
@@ -42,7 +54,6 @@
 					<source>${compilerVersion}</source>
 					<target>${compilerVersion}</target>
 				</configuration>
-
 			</plugin>
 		</plugins>
 	</build>
